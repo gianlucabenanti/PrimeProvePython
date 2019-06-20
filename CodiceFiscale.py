@@ -15,11 +15,8 @@ def consonanti(stringa):
     Consonanti = ["B", "C", "D", "F", "G", "H", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "Z"]
 
     for i in range( 0, stringa.__len__() ):
-        a = stringa[i]
-        for j in range( 0, Consonanti.__len__() ):
-            if a == Consonanti[j]:
-                b += a
-
+            if stringa[i] in Consonanti:
+                b = b + stringa[i]
     return b
 pass
 
@@ -31,4 +28,3 @@ b = consonanti( Cognome )
 CF_Cognome = b[0] + b[1] + b[2]
 
 print( CF_Cognome+CF_Nome )
-
