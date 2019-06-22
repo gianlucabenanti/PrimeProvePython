@@ -23,8 +23,14 @@ def consonanti(stringa):
     return b
 pass
 
+def consonanti2(stringa):
+    Consonanti = ["B", "C", "D", "F", "G", "H", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "Z"]
+    mylist = [i for i in stringa if i in Consonanti]
+    return mylist
+pass
 
-b = consonanti(Anagrafica["Nome"])
+
+b = consonanti2(Anagrafica["Nome"])
 CF_Nome = b[0] + b[2] + b[3]
 
 b = consonanti(Anagrafica["Cognome"])
