@@ -17,9 +17,9 @@ def consonanti(stringa):
     # inizializzo l'array delle consonanti
     Consonanti = ["B", "C", "D", "F", "G", "H", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "Z"]
 
-    for i in range( 0, stringa.__len__() ):
-            if stringa[i] in Consonanti:
-                b = b + stringa[i]
+    for a in stringa:
+            if a in Consonanti:
+                b = b + a
     return b
 pass
 
