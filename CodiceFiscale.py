@@ -21,13 +21,11 @@ def consonanti(stringa):
             if a in Consonanti:
                 b = b + a
     return b
-pass
 
 def consonanti2(stringa):
     Consonanti = ["B", "C", "D", "F", "G", "H", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "Z"]
     mylist = [i for i in stringa if i in Consonanti]
     return mylist
-pass
 
 
 b = consonanti2(Anagrafica["Nome"])
