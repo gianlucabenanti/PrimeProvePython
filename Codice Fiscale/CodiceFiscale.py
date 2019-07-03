@@ -159,7 +159,12 @@ CF_Anno = Anagrafica["Data"][-2:]
 
 CF_Mese = Mesi[Anagrafica["Data"][3:5]]
 
-CF_Giorno = Anagrafica["Data"][:2]
+if Anagrafica["Sesso"] == "M":
+    CF_Sesso = 0
+else:
+    CF_Sesso = 40
+
+CF_Giorno = str(int(Anagrafica["Data"][:2]) + CF_Sesso).zfill(2)
 
 CF_Luogo = comuni.get(Anagrafica["Luogo"])
 
