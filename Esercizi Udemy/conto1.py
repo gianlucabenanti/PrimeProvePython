@@ -4,7 +4,6 @@ class Conto:
         self.nome = nome
         self.conto = conto
 
-
 class ContoCorrente(Conto):
 
     def __init__(self,nome,conto,importo):
@@ -18,7 +17,7 @@ class ContoCorrente(Conto):
         self.__saldo += importo
 
     def descrizione(self):
-        print('Questo conto è intestato a: ', self.nome,'\nIl numero di conto è: ',self.conto, '\nIl saldo disponibile è: ', self.saldo)
+        print('Questo conto è intestato a: ', self.nome,'\nIl numero di conto è: ',self.conto, '\nIl saldo disponibile è: ', self.saldo, '\n')
 
     @property
     def saldo(self):
@@ -29,18 +28,20 @@ class ContoCorrente(Conto):
         self.preleva(self.saldo)
         self.deposita(importo)
 
+class GestoreContiCorrenti:
 
+    @staticmethod
+    def bonifico(sorgente, destinazione, importo):
+        sorgente.preleva(importo)
+        destinazione.deposita(importo)
 
 C1 = ContoCorrente('Gianluca','0001',1549)
 C2 = ContoCorrente('Daniele','0002',2897)
 
 C1.descrizione()
-print('\n')
 C2.descrizione()
 
-C1.saldo = 150
+GestoreContiCorrenti.bonifico(C1,C2,100)
 
-print('\n')
 C1.descrizione()
-print('\n')
 C2.descrizione()
