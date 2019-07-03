@@ -11,6 +11,7 @@ class ContoCorrente(Conto):
         self.__saldo = importo
 
     def preleva(self,importo):
+        assert self.__saldo > importo, "Saldo insufficiente!"
         self.__saldo -= importo
 
     def deposita(self,importo):
