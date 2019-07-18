@@ -1,5 +1,5 @@
 import pypyodbc
-from config import connect
+from configS import connect
 
 class FMDBC():
 
