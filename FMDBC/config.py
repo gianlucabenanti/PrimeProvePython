@@ -1,6 +1,6 @@
 connect = {
-    "DSN" : "VirtualFMLocal",
-    "Database" : "test",
-    "UID" : "AMMINISTRATORE",
-    "PWD" : "A569TZR",
+    "DSN" : "LocalODBC",
+    "Database" : "TestODBC",
+    "UID" : "admin",
+    "PWD" : "admin",
 }
